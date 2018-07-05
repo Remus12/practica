@@ -1,0 +1,13 @@
+\begin{thebibliography}{1}
+
+\bibitem{book:1}
+Ludmila~Malahova Alexandru~Colesnicov.
+\newblock {\em Latex prin exemple}.
+\newblock 2001.
+
+\bibitem{book:2}
+Thomas~Cormen Charles~Leiserson Ronald~Rivest
+\newblock {\em Introducere  în algoritmi}.
+\newblock 2000.
+
+\end{thebibliography}

@@ -1,0 +1,220 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage{ucs}
+\usepackage{color}
+\usepackage{graphicx}
+\usepackage{subfig}
+\usepackage[english,romanian]{babel}
+\begin{document}
+\begin{titlepage}
+ \begin{figure}
+\end{figure}
+\begin{center}
+    \textsc{\normalsize Universitatea "Ovidius" Constanța\\
+  Facultatea de Matematică și Informatică\\
+  Specializarea Informatică}\\
+  [4cm]
+    {\Large \sc Raport asupra practicii: 25.06-06.07.2018}\\[7cm]
+    \begin{flushright} \large
+    \textbf{Student:\ \ \ \ \ } \\
+    Turea Remus-Cristian
+   \end{flushright}
+  \vfill
+ \end{center}
+\end{titlepage}
+
+\tableofcontents
+\chapter{Introducere}
+
+Acest raport cuprinde descrierea activității desfășurate la practică  în cadrul Facultății de Matematică și Informatică în perioada 25.06-06.07.2018.
+
+\chapter{Activități planificate}
+\begin{itemize}
+\item  Luni, 25.06.2018 \newline
+Aducerea la cunoștință a obiectivelor și cerințelor practicii la calculator.
+\item  Marți, 26.06.2018 \newline
+Am ales tema: "Algoritmul de sortare rapidă (quick sort)".
+\item  Miercuri, 27.06.2018 \newline
+Am lucrat în Latex și am început să scriu raportul.
+\item  Joi, 28.06.2018 \newline
+M-am documentat cu privire la tema aleasă - "Algoritmul de sortare rapidă".
+\item  Vineri, 29.06.2018  \newline
+Am făcut o scurtă introducere si descriere a algoritmului de sortare rapidă.
+\item  Luni, 02.07.2018  \newline
+Am căutat un pseudocod pentru algoritmul de sortare rapidă.
+\item  Marți, 03.07.2018  \newline
+Am scris codul în limbajul java cu ajutorul NetBeans.
+\item  Miercuri, 04.07.2018  \newline
+Am testat funcționalitatea codului după ce am corectat erorile.  
+\item  Joi, 05.07.2018  \newline
+Am finalizat raportul în latex după ce am adăugat etapele parcurse in zilele precedente.
+\item  Vineri, 06.07.2018  \newline
+Prezentarea lucrărilor.
+Notarea finală a activității.
+\end{itemize}
+
+
+\chapter{25.06.2018}
+Am desfăţurat următoarele activităţi:
+\begin{itemize}
+\item
+Am identificat sursele pentru MikTeX, Git, SmartGit și BitBucket.
+\begin{itemize}
+\item
+Am identificat sursele pentru MikTeX, Git, SmartGit și BitBucket.
+\item
+Am instalat, configurat pe calculatorul de lucru aplicațiile necesare:
+\begin{itemize}
+\item
+MikTeX
+\item
+SmartGit
+\item
+Bitbucket
+\end{itemize}
+\item
+Am instalat, configurat pe calculatorul de lucru aplicațiile necesare:
+\begin{itemize}
+\item
+MikTeX
+\item
+SmartGit
+\item
+Bitbucket
+\end{itemize}
+\end{itemize}
+\end{itemize}
+Studierea obiectivelor și cerințelor față de practica de producție. Clarificarea situațiilor incerte.
+
+
+\chapter{26.06.2018}
+Am ales tema: "Algoritmul de sortare rapidă (quick sort)".
+\chapter{27.06.2018}
+Am studiat și lucrat în Latex și am început să scriu raportul. 
+
+\chapter{28.06.2018}
+
+M-am documentat cu privire la tema aleasă - "Algoritmul de sortare rapidă".
+
+\chapter{29.06.2018}
+
+Sortarea rapidă este un algoritm de sortare care, pentru un sir de n elemente, are un timp de execuție O(n2), în cazul cel mai defavorabil. În ciuda acestei comportări proaste, în cazul cel mai defavorabil, algoritmul de sortare rapidă este deseori cea mai bună soluție practică, deoarece are o comportare medie remarcabilă: timpul său mediu de execuție este O(n lg n), si constanta ascunsa în formula O(n lg n) este destul de mică. Algoritmul are avantajul că sortează pe loc (în spațiul alocat sirului de intrare) si lucrează foarte bine chiar si într-un mediu de memorie virtuală. Algoritmul de sortare rapidă se bazează pe paradigma “divide si stapâneste”.
+
+\chapter{02.07.2018}
+Am găsit un pseudocod pentru tema selectată.\newline
+
+QUICKSORT(A, p, r)
+\begin{enumerate}
+\item daca p \textless r atunci
+\item q $\leftarrow$ PARTIȚIE(A, p, r)
+\item QUICKSORT(A, p, q)
+\item QUICKSORT(A, q + 1, r)
+\end{enumerate}
+
+Pentru ordonarea întregului sir A, inițial se apelează Quicksort(A, 1, [A]). Cheia algoritmului este procedura Partiție, care rearanjează pe loc subsirul A[p..r]. \newline
+
+PARTIȚIE(A, p, r)
+\begin{enumerate}
+\item x $\leftarrow$ A[p]
+\item i $\leftarrow$ p - 1
+\item j $\leftarrow$ r - 1
+\item cât timp ADEVĂRAT execută
+\item repetă
+\item j $\leftarrow$ j - 1
+\item pâna când A[j] $\leq$ x
+\item repetă
+\item i $\leftarrow$ i + 1
+\item până când A[i] $\geq$ x
+\item daca i \textless j atunci
+\item interschimbă A[i] $\leftrightarrow$ A[j]
+\item altfel
+\item returnează j
+\end{enumerate}
+
+
+\chapter{03.07.2018}
+Am scris codul java în programul NetBeans:
+\newline
+class QSort\newline
+\{
+ 
+	    int partitie(int x[], int min, int max)
+    
+	\{\newline
+		\hspace*{1cm} int piv = x[max];\newline
+		\hspace*{1cm}int i = (min-1);\newline
+		\hspace*{1cm}for (int j=min; j \textless max; j++)\newline
+		\hspace*{1cm}\{\newline
+			\hspace*{1.5cm}if (x[j] \textless piv)\newline
+              \hspace*{1.5cm}\{\newline
+              \hspace*{2cm} i++;\newline
+		      \hspace*{2cm}int aux = x[i];\newline
+		      \hspace*{2cm}x[i] = x[j];\newline
+		      \hspace*{2cm}x[j] = aux;\newline
+              \hspace*{1.5cm}\}\newline
+         \hspace*{1cm}\}\newline   
+         
+         \hspace*{1cm}int aux = x[i+1];\newline
+		 \hspace*{1cm}x[i+1] = x[max];\newline
+		 \hspace*{1cm}x[max] = aux;\newline
+		 \hspace*{1cm}return i+1;\newline
+       \}\newline  
+       
+       void sort(int x[], int min, int max)
+       
+       \{\newline
+       \hspace*{1cm}if (min \textless max)\newline
+       \hspace*{1cm}\{\newline
+        \hspace*{1.5cm}int pi = partitie(x, min, max);\newline
+		\hspace*{1.5cm}sort(x, min, pi-1);\newline
+		\hspace*{1.5cm}sort(x, pi+1, max);\newline
+        \hspace*{1cm}\}\newline
+           \}\newline
+           
+       static void print(int x[])
+       
+       \{\newline
+       \hspace*{1cm}int n = x.length;\newline
+       \hspace*{1cm}for (int i=0; i \textless n; ++i)\newline
+        \hspace*{1.5cm}System.out.print(x[i]+" ");\newline
+        \hspace*{1cm}System.out.println();\newline
+           \}\newline    
+           
+       public static void main(String args[])
+       
+       \{\newline
+       \hspace*{1cm}int x[] = {12, 17, 3, 6, 1, 26, 89, 45, 111, 67};\newline
+       \hspace*{1cm}int n = x.length;\newline
+       
+       \hspace*{1cm}QSort obj = new QSort();\newline
+       \hspace*{1cm}obj.sort(x, 0, n-1);\newline
+       
+       \hspace*{1cm}System.out.println("sirul sortat");\newline
+       \hspace*{1cm}print(x);\newline
+           \}\newline     
+           
+\}              
+
+\chapter{04.07.2018}
+Am testat funcționalitatea codului după ce am corectat erorile.
+
+\chapter{05.07.2018}
+Am finalizat raportul în latex după ce am adăugat etapele parcurse in zilele precedente.
+
+\chapter{06.07.2018}
+Prezentarea proiectului.
+Notarea finală a activității.
+
+\chapter{Concluzii}
+\hspace*{0.3cm} Am învățat să lucrez cu Latex și Git. În latex am învățat cum să structurez paginile, să scriu cu diacritice utilizand pachetele  ``$\backslash$usepackeage$\{$ucs$\}$'' si ``$\backslash usepackage[english,romanian]$\{babel$\}$'', să alcătuiesc un cuprins, să adaug liste, să utilizez bibliografia.
+
+M-am familiarizat cu modul de lucru al Githubului creandu-mi un cont si am realizat două depozite;în primul am introdus fisierele implementării algoritmului de sortare rapidă, iar în al doilea am introdus fisierele care conțin raportul de practică.
+
+Am utilizat cărțile: \cite{book:1} pentru familiarizarea cu LaTex si \cite{book:2} pentru a studia tema aleasă "algoritmul de sortare rapidă". 
+
+ 
+\newpage
+\bibliography{bibliografie} 
+\bibliographystyle{plain}
+
+\end{document}
